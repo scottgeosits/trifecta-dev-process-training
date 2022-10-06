@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Field_Josh__c</fullName>
+    <description>Hello world!</description>
+    <externalId>false</externalId>
+    <label>Test Field Josh</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Time</type>
+</CustomField>

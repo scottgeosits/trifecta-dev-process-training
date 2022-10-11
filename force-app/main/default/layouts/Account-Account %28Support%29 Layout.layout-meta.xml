@@ -43,11 +43,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Test_Field_Josh__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Test_field_Josh_S__c</field>
+
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

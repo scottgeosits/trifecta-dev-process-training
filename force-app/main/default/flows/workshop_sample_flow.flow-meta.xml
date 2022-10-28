@@ -55,7 +55,7 @@
             <field>AnnualRevenue</field>
             <operator>GreaterThan</operator>
             <value>
-                <numberValue>2.0E8</numberValue>
+                <numberValue>1.0E8</numberValue>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>

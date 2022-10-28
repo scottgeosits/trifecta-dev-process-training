@@ -21,7 +21,7 @@
         </rules>
     </decisions>
     <interviewLabel>workshop sample flow {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>workshop sample flow</label>
+    <label>Meow Mix Orders</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -55,7 +55,7 @@
             <field>AnnualRevenue</field>
             <operator>GreaterThan</operator>
             <value>
-                <numberValue>1.0E8</numberValue>
+                <numberValue>2.0E8</numberValue>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>

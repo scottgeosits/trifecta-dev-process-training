@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>sample_decision</name>
+        <label>sample decision</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>nines</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Accounts_With_High_Revenue.AnnualRevenue</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>9.999999999E9</numberValue>
+                </rightValue>
+            </conditions>
+            <label>nines</label>
+        </rules>
+    </decisions>
+    <interviewLabel>workshop sample flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Meow Mix Orders</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Accounts_With_High_Revenue</name>
+        <label>Get Accounts With High Revenue</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>sample_decision</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AnnualRevenue</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>2.0E8</numberValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Accounts_With_High_Revenue</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>
